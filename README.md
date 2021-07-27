@@ -40,8 +40,8 @@ Here  uint32=> unsigned int;
 
 # Tags 
 
+* For protobuf the important element is Tag
 ```language
-For protobuf the important element is Tag
 
 *Smallest tag: 1,
 *Largest  tag: 2^29-1 or 536,870,911
@@ -56,13 +56,12 @@ For protobuf the important element is Tag
 
 # Repeated Fields
 
-```language
+* To make a array we can use the concept of repeated fields.
 
-*To make a array we can use the concept of repeated fields.
+```language
 
 For Example:
    
-
    message Student{
         
         string name = 1;
@@ -75,9 +74,10 @@ For Example:
 ```
 
 # Default Values for fields 
+* if you not given any value to the fields then there default value are:----
 ```language
 
-if you not given any value to the fields then there default value are:----
+
   
 *string => empty
 *enum   =>first value
@@ -101,8 +101,8 @@ message Employee{
   string email = 3;
 
   enum Gender{
-    UNKNOWN = 0;   // Here we always give the default value at field tag 0 So that if we did not enter
-    MALE    = 1;   // enter anyting it take up the default value tag 0;
+    UNKNOWN = 0;   // Here we always give the default value at field tag 0 So that if we did not 
+    MALE    = 1;   // enter anything it take up the default value tag 0;
     FEMALE  = 2;
   }
 
