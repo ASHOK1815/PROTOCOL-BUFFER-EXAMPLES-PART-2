@@ -133,8 +133,6 @@ message Employee{
 
 ```language
 
-
-
 message Student{
 
   string name = 1;
@@ -151,7 +149,5 @@ message DateOfBirth{
   
 }
 
-
-
-
 ```
+
