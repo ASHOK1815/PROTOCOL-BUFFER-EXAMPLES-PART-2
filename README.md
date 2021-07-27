@@ -6,7 +6,7 @@ Protocol Buffers (Protobuf) is a free and open source cross-platform library use
 
 ![hero image](assets/protocolbuffer.png)
 
-#Here's our first message:
+# Here's our first message:
 ```language
 syntax = "proto3"; // we have to use it if we want to use proto3  or  
 syntax = "proto2"; // we have to use it if we want to use proto2 
@@ -23,7 +23,7 @@ message MyMessage{
 
 ```
 
-#Scaler Types Number
+# Scaler Types Number
 
 ```language
 Numbers can take various forms based on what values you expect them to have:
@@ -36,7 +36,7 @@ Here  uint32=> unsigned int;
 
 ```
 
-#Tags 
+# Tags 
 
 ```language
 For protobuf the important element is Tag
