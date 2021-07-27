@@ -7,7 +7,7 @@ Protocol Buffers (Protobuf) is a free and open source cross-platform library use
 ![hero image](assets/protocolbuffer.png)
 
 
-'''
+```language
 syntax = "proto3" // we have to use it if we want to use proto3 
 
 message MyMessage{
@@ -19,4 +19,6 @@ message MyMessage{
 }
 
 
-'''
+```
+
+
