@@ -127,5 +127,31 @@ message Employee{
 ```
 
 
+# Multiple Message in Same .proto file
+
+* Yes it is possible to define multiple Message in same .proto file
+
+```language
 
 
+
+message Student{
+
+  string name = 1;
+  int32  uid  = 2;
+  string department = 3;
+  DateOfBirth date  = 4;
+}
+
+message DateOfBirth{
+   
+  int32 date = 1;
+  int32 month = 2;
+  int32 year =3;
+  
+}
+
+
+
+
+```
