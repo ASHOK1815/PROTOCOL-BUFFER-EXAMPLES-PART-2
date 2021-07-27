@@ -6,9 +6,11 @@ Protocol Buffers (Protobuf) is a free and open source cross-platform library use
 
 ![hero image](assets/protocolbuffer.png)
 
-
+##Here's our first message:
 ```language
-syntax = "proto3" // we have to use it if we want to use proto3 
+syntax = "proto3" // we have to use it if we want to use proto3  or  
+syntax = "proto2" // we have to use it if we want to use proto2 
+
 
 message MyMessage{
 
@@ -21,4 +23,15 @@ message MyMessage{
 
 ```
 
+##Scaler Types Number
 
+```language
+NUmbers can take various forms based on what values you expect them to have:
+
+double,float,int32,int64,uint32,uint64,sint32,sint64,fixed32,fixed64,sfixed32,sfixed64
+
+Here  uint32=> unsigned int;
+      sint32=> signed int;
+      
+
+```
