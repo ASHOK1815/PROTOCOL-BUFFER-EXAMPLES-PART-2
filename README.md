@@ -1,14 +1,9 @@
 # PROTOCOL-BUFFER-EXAMPLES-PART-2
-```language
-
-Protocol Buffers (Protobuf) is a free and open source cross-platform library used to serialize structured data.<br>
-It is useful in developing programs to communicate with each other over a network or for storing data. <br>
-The method involves an interface description language that describes the structure of some data and a program <br>
-that generates source code from that description for generating or parsing a stream of bytes that represents <br>
-the structured data.
 
 
-```
+Protocol Buffers (Protobuf) is a free and open source cross-platform library used to serialize structured data. It is useful in developing programs to communicate with each other over a network or for storing data. The method involves an interface description language that describes the structure of some data and a program that generates source code from that description for generating or parsing a stream of bytes that represents the structured data.
+
+
 
 
 ![hero image](assets/protocolbuffer.png)
@@ -37,8 +32,8 @@ Numbers can take various forms based on what values you expect them to have:
 
 double,float,int32,int64,uint32,uint64,sint32,sint64,fixed32,fixed64,sfixed32,sfixed64
 
-Here  *uint32=> unsigned int;
-      *sint32=> signed int;
+Here  uint32=> unsigned int;
+      sint32=> signed int;
       
 
 ```
