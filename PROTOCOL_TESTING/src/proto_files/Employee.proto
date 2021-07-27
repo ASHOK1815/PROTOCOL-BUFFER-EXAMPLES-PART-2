@@ -1,0 +1,23 @@
+syntax ="proto3";
+
+
+option java_multiple_files = true;
+option java_package = "com.example.protos.employee";
+
+message Employee{
+
+  int32 empId = 1;
+  string empName = 2;
+  string email = 3;
+
+  enum Gender{
+    UNKNOWN = 0;
+    MALE    = 1;
+    FEMALE  = 2;
+  }
+
+  Gender gender = 4;
+  int32 salary  = 5;
+
+}
+

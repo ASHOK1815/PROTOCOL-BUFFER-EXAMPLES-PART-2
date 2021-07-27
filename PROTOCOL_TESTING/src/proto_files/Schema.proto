@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+
+option java_multiple_files = true;
+option  java_package = "proto.example.Schema";
+option java_outer_classname = "SchemaProtos";
+
+
+message Student{
+
+  string name =1;
+  int32  uid =2;
+  string department =3;
+
+}
+message Students{
+  repeated Student students =1;
+}
