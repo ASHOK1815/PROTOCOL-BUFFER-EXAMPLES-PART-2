@@ -47,8 +47,85 @@ For protobuf the important element is Tag
 *Largest  tag: 2^29-1 or 536,870,911
 *Tags numbered from 1 to 15  use 1 byte in space
 *Tags numbered from 16 to 2047  use 2 byte in space
-*Note: We cannot use the number 19000 thorugh 19999(as it is reserved by google for their personal use)
+*Note: We cannot use the number 19000 thorugh 19999
+       (as it is reserved by google for their personal use)
 
 
 
 ```
+
+# Repeated Fields
+
+```language
+
+*To make a array we can use the concept of repeated fields.
+
+For Example:
+   
+
+   message Student{
+        
+        string name = 1;
+        int32 age = 2;
+        int32 uid = 3;
+        repeated string phone_number = 4;  // Her a student can have multiple phone number :)
+   }
+
+
+```
+
+# Default Values for fields 
+```language
+
+if you not given any value to the fields then there default value are:----
+  
+*string => empty
+*enum   =>first value
+*bool   =>false
+*int32    =>0
+
+
+```
+
+
+# Enums
+
+About Enums("https://www.w3schools.com/java/java_enums.asp")
+
+```
+
+message Employee{
+
+  int32 empId = 1;
+  string empName = 2;
+  string email = 3;
+
+  enum Gender{
+    UNKNOWN = 0;   // Here we always give the default value at field tag 0 So that if we did not enter
+    MALE    = 1;   // enter anyting it take up the default value tag 0;
+    FEMALE  = 2;
+  }
+
+  Gender gender = 4;
+  int32 salary  = 5;
+
+}
+
+```
+
+# Calling of Enums tag Examples
+
+```
+ 
+   employee.setEmpName("ASHOK")
+                .setEmail("rupender20@gmail.com")
+                .setEmpId(6735)
+                .setGenderValue(Employee.Gender.MALE_VALUE) // Defining of the Gender(Enum)
+                .setSalary(60000);
+
+
+```
+
+
+
+
