@@ -163,7 +163,7 @@ message DateOfBirth{
 
 ```
 
-# We can write nesting message also 
+# We can write Nesting message also 
 
 * Yes it is possible to define types within types...
 ```
@@ -189,4 +189,63 @@ message DateOfBirth{
 # Importing Types 
 
 * Helpful if you want to reuse code by importing other .proto file
+* For Example
+```
+Address.proto //Address proto file
 
+syntax = "proto3";
+
+message Address{  
+    string city = 1;
+    string pin_code = 2;
+    string street_name = 3;
+  }
+
+
+```
+* Note :- while importing complete address must be given 
+```language
+
+Student.proto // student proto file
+
+syntax = "proto3";
+
+import "Proto_files/Address.proto";  //Read Above Note
+
+message Student{
+
+  string name = 1;
+  int32  uid  = 2;
+  string department = 3;
+  Address address = 4;
+
+}
+```
+
+
+# Packages 
+
+* It help to prevent name conflicts between messages 
+
+* we can add an optional package specifier to a .proto file to prevent name clashes between protocol message types.
+```
+
+package foo.bar;
+message Open { ... }
+
+You can then use the package specifier when defining fields of your message type:
+
+message Foo {
+  ...
+  required foo.bar.Open open = 1;
+  ...
+}
+
+
+```
+
+
+
+# Refrences :
+
+https://developers.google.com/protocol-buffers/docs/overview
