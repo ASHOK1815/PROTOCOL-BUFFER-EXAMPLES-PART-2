@@ -46,8 +46,8 @@ Numbers can take various forms based on what values you expect them to have:
 
 double,float,int32,int64,uint32,uint64,sint32,sint64,fixed32,fixed64,sfixed32,sfixed64
 
-Here  uint32=> unsigned int;
-      sint32=> signed int;
+Here  uint32 => unsigned int;
+      sint32 => signed int;
       
 
 ```
@@ -81,7 +81,7 @@ For Example:
         string name = 1;
         int32 age = 2;
         int32 uid = 3;
-        repeated string phone_number = 4;  // Her a student can have multiple phone number :)
+        repeated string phone_number = 4;  // Here a student can have multiple phone number :)
    }
 
 
@@ -91,12 +91,10 @@ For Example:
 * if you not given any value to the fields then there default value are:----
 ```language
 
-
-  
 *string => empty
 *enum   =>first value
 *bool   =>false
-*int32    =>0
+*int32  =>0
 
 
 ```
@@ -157,11 +155,38 @@ message Student{
 
 message DateOfBirth{
    
-  int32 date = 1;
+  int32 date  = 1;
   int32 month = 2;
-  int32 year =3;
+  int32 year  = 3;
   
 }
 
 ```
+
+# We can write nesting message also 
+
+* Yes it is possible to define types within types...
+```
+ message Student{
+
+  string name = 1;
+  int32  uid  = 2;
+  string department = 3;
+  
+  message Address{  // Here we define type address within Student (name access is Student.Address)
+    string city = 1;
+    string pin_code = 2;
+    string street_name = 3;
+  }
+  
+  Address address = 4;
+
+}
+
+
+```
+ 
+# Importing Types 
+
+* Helpful if you want to reuse code by importing other .proto file
 
