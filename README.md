@@ -261,12 +261,6 @@ Here $-I=SRC_DIR => address of the protoc compiler.
 
 ```
 
-
-
-
-
-
-
 # References :
 
 https://developers.google.com/protocol-buffers/docs/overview
