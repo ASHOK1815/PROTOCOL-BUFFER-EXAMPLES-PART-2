@@ -57,11 +57,11 @@ Here  uint32 => unsigned int;
 * For protobuf the important element is Tag
 ```language
 
-*Smallest tag: 1,
-*Largest  tag: 2^29-1 or 536,870,911
-*Tags numbered from 1 to 15  use 1 byte in space
-*Tags numbered from 16 to 2047  use 2 byte in space
-*Note: We cannot use the number 19000 thorugh 19999
+* Smallest tag: 1,
+* Largest  tag: 2^29-1 or 536,870,911
+* Tags numbered from 1 to 15  use 1 byte in space
+* Tags numbered from 16 to 2047  use 2 byte in space
+* Note: We cannot use the number 19000 thorugh 19999
        (as it is reserved by google for their personal use)
 
 
@@ -91,10 +91,10 @@ For Example:
 * if you not given any value to the fields then there default value are:----
 ```language
 
-*string => empty
-*enum   =>first value
-*bool   =>false
-*int32  =>0
+* string => empty
+* enum   =>first value
+* bool   =>false
+* int32  =>0
 
 
 ```
